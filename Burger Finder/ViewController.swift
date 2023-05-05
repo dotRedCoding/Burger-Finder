@@ -10,6 +10,8 @@ import MapKit
 
 class ViewController: UIViewController {
     // MARK: - PROPERTY
+    var locationManager: CLLocationManager?
+    
     lazy var mapView: MKMapView = {
        let map = MKMapView()
         map.showsUserLocation = true
@@ -28,9 +30,17 @@ class ViewController: UIViewController {
         searchTextField.translatesAutoresizingMaskIntoConstraints = false
         return searchTextField
     }()
+    
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // locationManager init
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestWhenInUseAuthorization()
+        locationManager?.requestAlwaysAuthorization()
+        locationManager?.requestLocation()
         
         setupUI()
         
@@ -41,13 +51,14 @@ class ViewController: UIViewController {
         view.addSubview(searchTextField) // order matters here think VStack
         view.addSubview(mapView)
         view.bringSubviewToFront(searchTextField) // this has to be last I guess
+        
+        // add constraints to searchTextField
         searchTextField.widthAnchor.constraint(equalToConstant: view.bounds.size.width / 1.2).isActive = true
         searchTextField.heightAnchor.constraint(equalToConstant: 44).isActive = true
         searchTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         searchTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 60).isActive = true
         searchTextField.returnKeyType = .search
-        
-        
+                
         // add constraints to mapView
         mapView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true // map width = view width
         mapView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true // map height = view height
@@ -58,5 +69,18 @@ class ViewController: UIViewController {
     
     
 
+}
+
+// MARK: - EXTENSIONS
+
+extension ViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
 }
 

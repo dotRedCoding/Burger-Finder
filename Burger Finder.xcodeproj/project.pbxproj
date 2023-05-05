@@ -282,6 +282,8 @@
 				DEVELOPMENT_TEAM = 2KGL4TUSQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Burger Finder/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Burger Finder requires location so it can offer near by points of interest";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Burger Finder requires location so it can offer near by points of interest";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -309,6 +311,8 @@
 				DEVELOPMENT_TEAM = 2KGL4TUSQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Burger Finder/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Burger Finder requires location so it can offer near by points of interest";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Burger Finder requires location so it can offer near by points of interest";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
