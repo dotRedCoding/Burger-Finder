@@ -65,6 +65,23 @@ class ViewController: UIViewController {
         mapView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         mapView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
+    
+    private func checkLocationAuth() {
+        guard let locationManager = locationManager,
+              let location = locationManager.location else { return }
+        
+        switch locationManager.authorizationStatus {
+        case .authorizedWhenInUse, .authorizedAlways:
+            let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 750, longitudinalMeters: 750)
+            mapView.setRegion(region, animated: true)
+        case .denied:
+            print("Location services have been denied")
+        case.notDetermined, .restricted:
+            print("Location can not be determined or it has been restricted")
+        @unknown default:
+            print("Unknown issue, unable to get location")
+        }
+    }
     // MARK: - BODY
     
     
@@ -77,6 +94,10 @@ extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkLocationAuth()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
