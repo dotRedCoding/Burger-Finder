@@ -10,7 +10,6 @@
 		211921AD2A058FD6003D7D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211921AC2A058FD6003D7D8F /* AppDelegate.swift */; };
 		211921AF2A058FD6003D7D8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211921AE2A058FD6003D7D8F /* SceneDelegate.swift */; };
 		211921B12A058FD6003D7D8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211921B02A058FD6003D7D8F /* ViewController.swift */; };
-		211921B42A058FD6003D7D8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211921B22A058FD6003D7D8F /* Main.storyboard */; };
 		211921B72A058FD6003D7D8F /* Burger_Finder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 211921B52A058FD6003D7D8F /* Burger_Finder.xcdatamodeld */; };
 		211921B92A058FD7003D7D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211921B82A058FD7003D7D8F /* Assets.xcassets */; };
 		211921BC2A058FD7003D7D8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211921BA2A058FD7003D7D8F /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 		211921AC2A058FD6003D7D8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		211921AE2A058FD6003D7D8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		211921B02A058FD6003D7D8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		211921B32A058FD6003D7D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		211921B62A058FD6003D7D8F /* Burger_Finder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Burger_Finder.xcdatamodel; sourceTree = "<group>"; };
 		211921B82A058FD7003D7D8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211921BB2A058FD7003D7D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 				211921AC2A058FD6003D7D8F /* AppDelegate.swift */,
 				211921AE2A058FD6003D7D8F /* SceneDelegate.swift */,
 				211921B02A058FD6003D7D8F /* ViewController.swift */,
-				211921B22A058FD6003D7D8F /* Main.storyboard */,
 				211921B82A058FD7003D7D8F /* Assets.xcassets */,
 				211921BA2A058FD7003D7D8F /* LaunchScreen.storyboard */,
 				211921BD2A058FD7003D7D8F /* Info.plist */,
@@ -130,7 +127,6 @@
 			files = (
 				211921BC2A058FD7003D7D8F /* LaunchScreen.storyboard in Resources */,
 				211921B92A058FD7003D7D8F /* Assets.xcassets in Resources */,
-				211921B42A058FD6003D7D8F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,14 +147,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		211921B22A058FD6003D7D8F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				211921B32A058FD6003D7D8F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		211921BA2A058FD7003D7D8F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +284,6 @@
 				INFOPLIST_FILE = "Burger Finder/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +311,6 @@
 				INFOPLIST_FILE = "Burger Finder/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
