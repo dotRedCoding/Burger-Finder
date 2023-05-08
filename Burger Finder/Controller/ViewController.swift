@@ -11,6 +11,7 @@ import MapKit
 class ViewController: UIViewController {
     // MARK: - PROPERTY
     var locationManager: CLLocationManager?
+    private var places: [PlaceAnnotation] = []
     
     lazy var mapView: MKMapView = {
         let map = MKMapView()
@@ -96,14 +97,17 @@ class ViewController: UIViewController {
         search.start { [weak self] response, error in
             guard let response = response, error == nil else { return }
             
-            let places = response.mapItems.map(PlaceAnnotation.init) // pass individual mapItems into PlaceAnnotation init (will be an array of Place Annotations)
-            places.forEach { place in // go through places and add the annotation to the mapView for each place
+            self?.places = response.mapItems.map(PlaceAnnotation.init) // pass individual mapItems into PlaceAnnotation init (will be an array of Place Annotations)
+            self?.places.forEach { place in // go through places and add the annotation to the mapView for each place
                 self?.mapView.addAnnotation(place)
             }
-            presentPlaces(places: places)
+            if let places = self?.places {
+                self?.presentPlaces(places: places)
+            }
         }
+    }
         
-        func presentPlaces(places: [PlaceAnnotation]) {
+    func presentPlaces(places: [PlaceAnnotation]) {
             
             guard let locationManager = locationManager,
                   let userLocation = locationManager.location
@@ -119,9 +123,14 @@ class ViewController: UIViewController {
             }
             
         }
-        
-    }
     
+    private func clearAllSelections() {
+        self.places = self.places.map { place in
+            place.isSelected = false
+            return place
+        }
+    }
+        
     
     // MARK: - BODY
     
@@ -132,6 +141,18 @@ class ViewController: UIViewController {
 // MARK: - EXTENSIONS
 
 extension ViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
+        // clear all selections
+        clearAllSelections()
+        
+        guard let selectedAnnotation =  annotation as? PlaceAnnotation else { return }
+        let placeAnnotation = self.places.first(where: {$0.id == selectedAnnotation.id})
+        placeAnnotation?.isSelected = true
+        presentPlaces(places: self.places)
+        
+    }
+    
     
 }
 
