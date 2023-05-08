@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210974162A09715A001BD27F /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210974152A09715A001BD27F /* PlaceDetailViewController.swift */; };
 		211921AD2A058FD6003D7D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211921AC2A058FD6003D7D8F /* AppDelegate.swift */; };
 		211921AF2A058FD6003D7D8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211921AE2A058FD6003D7D8F /* SceneDelegate.swift */; };
 		211921B12A058FD6003D7D8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211921B02A058FD6003D7D8F /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		210974152A09715A001BD27F /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		211921A92A058FD6003D7D8F /* Burger Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Burger Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		211921AC2A058FD6003D7D8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		211921AE2A058FD6003D7D8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				211921B02A058FD6003D7D8F /* ViewController.swift */,
 				217DCB1B2A0933A600F73BDE /* PlacesTableViewController.swift */,
+				210974152A09715A001BD27F /* PlaceDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				211921B72A058FD6003D7D8F /* Burger_Finder.xcdatamodeld in Sources */,
+				210974162A09715A001BD27F /* PlaceDetailViewController.swift in Sources */,
 				217DCB192A092B9800F73BDE /* CLLocation+Extensions.swift in Sources */,
 				211921B12A058FD6003D7D8F /* ViewController.swift in Sources */,
 				217DCB162A092A5500F73BDE /* PlaceAnnotation.swift in Sources */,
