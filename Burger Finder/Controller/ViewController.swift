@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         searchTextField.layer.cornerRadius = 10
         searchTextField.clipsToBounds = true
         searchTextField.backgroundColor = UIColor.white
+        searchTextField.textColor = UIColor.black
         searchTextField.placeholder = "Search"
         searchTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0)) // adds padding
         searchTextField.leftViewMode = .always
