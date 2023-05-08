@@ -13,14 +13,14 @@ class ViewController: UIViewController {
     var locationManager: CLLocationManager?
     
     lazy var mapView: MKMapView = {
-       let map = MKMapView()
+        let map = MKMapView()
         map.showsUserLocation = true
         map.translatesAutoresizingMaskIntoConstraints = false
         return map
     }()
     
     lazy var searchTextField: UITextField = {
-       let searchTextField = UITextField()
+        let searchTextField = UITextField()
         searchTextField.delegate = self
         searchTextField.layer.cornerRadius = 10
         searchTextField.clipsToBounds = true
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         searchTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         searchTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 60).isActive = true
         searchTextField.returnKeyType = .search
-                
+        
         // add constraints to mapView
         mapView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true // map width = view width
         mapView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true // map height = view height
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     }
     
     private func findNearbyPlaces(by query: String) {
-         // clear all pins
+        // clear all pins
         mapView.removeAnnotations(mapView.annotations)
         let request = MKLocalSearch.Request() // perfroms local searches using Apples framework
         request.naturalLanguageQuery = query
@@ -99,11 +99,25 @@ class ViewController: UIViewController {
             places.forEach { place in // go through places and add the annotation to the mapView for each place
                 self?.mapView.addAnnotation(place)
             }
-            
-            print(response.mapItems) // this is for ther terminal right now
-            
+            presentPlaces(places: places)
         }
         
+        func presentPlaces(places: [PlaceAnnotation]) {
+            
+            guard let locationManager = locationManager,
+                  let userLocation = locationManager.location
+            else { return }
+            
+            let placesVC = PlacesTableViewController(userLocation: userLocation, places: places)
+            placesVC.modalPresentationStyle = .pageSheet
+            
+            if let sheet = placesVC.sheetPresentationController {
+                sheet.prefersGrabberVisible = true
+                sheet.detents = [.medium(), .large()] // an array of heights
+                present(placesVC, animated: true)
+            }
+            
+        }
         
     }
     
@@ -111,7 +125,7 @@ class ViewController: UIViewController {
     // MARK: - BODY
     
     
-
+    
 }
 
 // MARK: - EXTENSIONS
@@ -126,7 +140,7 @@ extension ViewController: UITextFieldDelegate {
             // find nearby places
             findNearbyPlaces(by: text)
         }
-
+        
         return true
     }
     

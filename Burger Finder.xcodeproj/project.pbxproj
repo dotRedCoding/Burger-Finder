@@ -15,6 +15,7 @@
 		211921BC2A058FD7003D7D8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211921BA2A058FD7003D7D8F /* LaunchScreen.storyboard */; };
 		217DCB162A092A5500F73BDE /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DCB152A092A5500F73BDE /* PlaceAnnotation.swift */; };
 		217DCB192A092B9800F73BDE /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DCB182A092B9800F73BDE /* CLLocation+Extensions.swift */; };
+		217DCB1C2A0933A600F73BDE /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DCB1B2A0933A600F73BDE /* PlacesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		211921BD2A058FD7003D7D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		217DCB152A092A5500F73BDE /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		217DCB182A092B9800F73BDE /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
+		217DCB1B2A0933A600F73BDE /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				211921B02A058FD6003D7D8F /* ViewController.swift */,
+				217DCB1B2A0933A600F73BDE /* PlacesTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				211921B12A058FD6003D7D8F /* ViewController.swift in Sources */,
 				217DCB162A092A5500F73BDE /* PlaceAnnotation.swift in Sources */,
 				211921AD2A058FD6003D7D8F /* AppDelegate.swift in Sources */,
+				217DCB1C2A0933A600F73BDE /* PlacesTableViewController.swift in Sources */,
 				211921AF2A058FD6003D7D8F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
