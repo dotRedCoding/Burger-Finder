@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     lazy var mapView: MKMapView = {
         let map = MKMapView()
+        map.delegate = self
         map.showsUserLocation = true
         map.translatesAutoresizingMaskIntoConstraints = false
         return map
@@ -129,6 +130,10 @@ class ViewController: UIViewController {
 }
 
 // MARK: - EXTENSIONS
+
+extension ViewController: MKMapViewDelegate {
+    
+}
 
 extension ViewController: UITextFieldDelegate {
     
