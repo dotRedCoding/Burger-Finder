@@ -87,6 +87,10 @@ final class PlaceDetailViewController: UIViewController {
         contactStackView.axis = .horizontal
         contactStackView.spacing = UIStackView.spacingUseSystem
         
+        directionButton.addTarget(self, action: #selector(directionButtonTapped), for: .touchUpInside) // when you press button call the function directionButtonTapped
+        callButton.addTarget(self, action: #selector(callButtonTapped), for: .touchUpInside) // when you press button it will call the func callButtonTapped
+
+        // Arrange
         contactStackView.addArrangedSubview(directionButton)
         contactStackView.addArrangedSubview(callButton)
         
@@ -94,6 +98,21 @@ final class PlaceDetailViewController: UIViewController {
         view.addSubview(stackView)
     }
     
+    @objc func directionButtonTapped(_ sender: UIButton) {
+        let coordinate = place.location.coordinate
+        guard let url = URL(string: "http://maps.apple.com/?daddr=\(coordinate.latitude),\(coordinate.longitude)") else {
+            fatalError("Location could not be found!")
+        }
+        UIApplication.shared.open(url)
+    }
     
+    @objc func callButtonTapped(_ sender: UIButton) {
+        
+        
+        guard let url = URL(string: "tel://\(place.phone.formatPhoneForCall)") else {
+            fatalError("Phone number could not be found!")
+        }
+        UIApplication.shared.open(url)
+    }
     
 }
