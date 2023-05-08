@@ -13,6 +13,8 @@
 		211921B72A058FD6003D7D8F /* Burger_Finder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 211921B52A058FD6003D7D8F /* Burger_Finder.xcdatamodeld */; };
 		211921B92A058FD7003D7D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211921B82A058FD7003D7D8F /* Assets.xcassets */; };
 		211921BC2A058FD7003D7D8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211921BA2A058FD7003D7D8F /* LaunchScreen.storyboard */; };
+		217DCB162A092A5500F73BDE /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DCB152A092A5500F73BDE /* PlaceAnnotation.swift */; };
+		217DCB192A092B9800F73BDE /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217DCB182A092B9800F73BDE /* CLLocation+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		211921B82A058FD7003D7D8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211921BB2A058FD7003D7D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		211921BD2A058FD7003D7D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		217DCB152A092A5500F73BDE /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		217DCB182A092B9800F73BDE /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +62,39 @@
 			children = (
 				211921AC2A058FD6003D7D8F /* AppDelegate.swift */,
 				211921AE2A058FD6003D7D8F /* SceneDelegate.swift */,
-				211921B02A058FD6003D7D8F /* ViewController.swift */,
+				217DCB1A2A092BA200F73BDE /* Controller */,
+				217DCB142A092A3700F73BDE /* Annotations */,
+				217DCB172A092B6600F73BDE /* Extensions */,
 				211921B82A058FD7003D7D8F /* Assets.xcassets */,
 				211921BA2A058FD7003D7D8F /* LaunchScreen.storyboard */,
 				211921BD2A058FD7003D7D8F /* Info.plist */,
 				211921B52A058FD6003D7D8F /* Burger_Finder.xcdatamodeld */,
 			);
 			path = "Burger Finder";
+			sourceTree = "<group>";
+		};
+		217DCB142A092A3700F73BDE /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				217DCB152A092A5500F73BDE /* PlaceAnnotation.swift */,
+			);
+			path = Annotations;
+			sourceTree = "<group>";
+		};
+		217DCB172A092B6600F73BDE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				217DCB182A092B9800F73BDE /* CLLocation+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		217DCB1A2A092BA200F73BDE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				211921B02A058FD6003D7D8F /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				211921B72A058FD6003D7D8F /* Burger_Finder.xcdatamodeld in Sources */,
+				217DCB192A092B9800F73BDE /* CLLocation+Extensions.swift in Sources */,
 				211921B12A058FD6003D7D8F /* ViewController.swift in Sources */,
+				217DCB162A092A5500F73BDE /* PlaceAnnotation.swift in Sources */,
 				211921AD2A058FD6003D7D8F /* AppDelegate.swift in Sources */,
 				211921AF2A058FD6003D7D8F /* SceneDelegate.swift in Sources */,
 			);
